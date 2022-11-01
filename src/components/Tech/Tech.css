@@ -1,0 +1,55 @@
+.tech {
+    width: 320px;
+    margin: 0 auto 70px auto;
+}
+
+.tech__title {
+    margin: 70px auto 0 18px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+}
+
+.tech__info {
+    border-top: 1px solid black;
+    width: 284px;
+    margin: 28px auto 0 auto;
+}
+
+.tech__subtitle {
+    margin: 70px auto 0 auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: -1.2px;
+}
+
+.tech__main-text {
+    margin: 24px auto 0 auto;
+    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+}
+
+.tech__container {
+    width: 320px;
+    margin: 50px auto 0 auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,84px);
+    gap: 10px;
+}
+
+.tech__card-text {
+    margin: 0;
+    padding: 0;
+    width: 84px;
+    height: 57px;
+    border-radius: 10px;
+    background-color: #E8E8E8;
+    text-align: center;
+    line-height: 57px;
+    font-size: 11px;
+    letter-spacing: -0.44px;
+}

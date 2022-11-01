@@ -1,0 +1,71 @@
+.about {
+    width: 320px;
+    margin: 0 auto 70px auto;
+}
+
+.about__title {
+    margin: 70px auto 0 18px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+}
+
+.about__container {
+    border-top: 1px solid black;
+    width: 284px;
+    margin: 28px auto 0 auto;
+}
+
+.info:first-of-type {
+    margin: 60px auto 0 auto;
+}
+
+.info {
+    margin: 56px auto 0 auto;
+}
+
+.info__title {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.72px;
+}
+
+.info__text {
+    margin: 16px auto 0 auto;
+    padding: 0;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.about__time-line {
+    display: flex;
+}
+
+.about__green-line {
+    margin: 60px 0 0 0;
+    width: 100px;
+    height: 35px;
+    background-color: #2BE080;
+    text-align: center;
+}
+
+.about__white-line {
+    margin: 60px 0 0 0;
+    width: 184px;
+    height: 35px;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.about__week {
+    font-size: 11px;
+}
+
+.about__span {
+    margin: 10px auto 0 auto;
+    font-family: 'SuisseIntl';
+    font-size: 11px;
+    color: #A0A0A0;
+}

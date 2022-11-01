@@ -1,0 +1,13 @@
+.portfolio {
+    width: 320px;
+    margin: 70px auto 70px auto;
+}
+
+.portfolio__title {
+    margin: 0 0 0 14px;
+    font-family: 'Inter';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #A0A0A0;
+}
