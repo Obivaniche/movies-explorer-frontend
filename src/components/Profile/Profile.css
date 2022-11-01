@@ -51,4 +51,12 @@
     color: #000000;
     font-size: 14px;
     font-weight: 500;
+    -webkit-transition: opacity .4s linear;
+    -o-transition: opacity .4s linear;
+    transition: opacity .4s linear;
+    cursor: pointer;
+}
+
+.profile__link:hover {
+    opacity: 0.8;
 }

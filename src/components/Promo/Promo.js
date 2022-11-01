@@ -6,9 +6,7 @@ export default function Promo() {
   return (
     <section className="promo">
       <div className="promo__container">
-        <h1 className="promo__title">
-          Учебный проект студента&nbsp;факультета Веб&#8209;разработки.
-        </h1>
+        <h1 className="promo__title">Учебный проект студента факультета Веб-разработки.</h1>
         <div className="promo__navbar">
           <Link className="promo__link">О проекте</Link>
           <Link className="promo__link">Технологии</Link>

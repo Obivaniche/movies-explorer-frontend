@@ -1,7 +1,7 @@
 .promo {
     width: 320px;
     height: 600px;
-    margin: auto;
+    margin: 0 auto 0 auto;
 }
 
 .promo__container {
@@ -23,6 +23,7 @@
 }
 
 .promo__navbar {
+    width: 258px;
     margin: 212px auto 0 auto;
     display: flex;
 }
@@ -30,7 +31,7 @@
 .promo__link {
     height: 26px;
     width: 82px;
-    margin: 0 auto;
+    margin: 0 6px 0 0;
     padding: 0;
     background-color: #E8E8E8;
     border: none;
@@ -49,6 +50,49 @@
     cursor: pointer;
 }
 
+.promo__link:last-of-type {
+    margin: 0;
+}
+
 .promo__link:hover {
     opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+
+    .promo {
+        width: 768px;
+        height: 854px;
+    }
+
+    .promo__container {
+        width: 728px;
+        height: 834px;
+        margin: 20px auto 0 auto;
+    }
+
+    .promo__title {
+        margin: 0 auto;
+        width: 680px;
+        font-size: 40px;
+        line-height: 52px;
+        font-weight: 400;
+        letter-spacing: -1.6px;
+        padding: 350px 0 0 0;
+    }
+
+    .promo__navbar {
+        width: 308px;
+        margin: 314px auto 0 auto;
+        display: flex;
+    }
+
+    .promo__link {
+        width: 96px;
+        height: 36px;
+        margin: 0 10px 0 0;
+        font-size: 12px;
+        line-height: 36px;
+    }
+    
 }

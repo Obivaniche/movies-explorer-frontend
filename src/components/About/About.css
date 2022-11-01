@@ -1,6 +1,6 @@
 .about {
     width: 320px;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 0 auto;
 }
 
 .about__title {
@@ -41,6 +41,8 @@
 
 .about__time-line {
     display: flex;
+    margin: auto;
+    width: 284px;
 }
 
 .about__green-line {
@@ -64,8 +66,77 @@
 }
 
 .about__span {
-    margin: 10px auto 0 auto;
+    margin: 21px auto 0 auto;
     font-family: 'SuisseIntl';
     font-size: 11px;
     color: #A0A0A0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .about {
+        width: 768px;
+        margin: 0 auto 0 auto;
+    }
+
+    .about__title {
+        margin: 70px auto 0 50px;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: -0.88px;
+    }
+
+    .about__container {
+        display: flex;
+        width: 668px;
+        margin: 23px auto 0 auto;
+    }
+
+    .info:first-of-type {
+        margin: 70px 30px 0 0;
+    }
+
+    .info {
+        width: 319px;
+        margin: 70px 0 0 0;
+    }
+
+    .info__title {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+    }
+    
+    .info__text {
+        margin: 22px auto 0 auto;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .about__time-line {
+        width: 668px;
+    }
+
+    .about__green-line {
+        margin: 93px 0 0 0;
+        width: 140px;
+        height: 36px;
+    }
+
+    .about__white-line {
+        margin: 93px 0 0 0;
+        width: 528px;
+        height: 36px;
+    }
+
+    .about__week {
+        font-size: 14px;
+        margin: 9px auto 0 auto;
+    }
+
+    .about__span {
+        margin: 23px auto 0 auto;
+        height: 17px;
+        font-size: 14px;
+    }
 }

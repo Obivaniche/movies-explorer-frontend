@@ -5,6 +5,7 @@ import About from '../About/About.js';
 import Tech from '../Tech/Tech.js';
 import Profile from '../Profile/Profile.js';
 import Portfolio from '../Portfolio/Portfolio.js';
+import Footer from '../Footer/Footer.js';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       </Profile>
       <Portfolio className="portfolio">
       </Portfolio>
+      <Footer className="footer">
+      </Footer>
     </div>
   );
 }

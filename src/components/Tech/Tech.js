@@ -7,8 +7,8 @@ export default function Tech() {
         <section className="tech">
             <h2 className="tech__title">Технологии</h2>
             <article className="tech__info">
-                <h3 className="tech__subtitle">7 технологий</h3>
-                <p className="tech__main-text">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
+                <h3 className="tech__subtitle">7&nbsp;технологий</h3>
+                <p className="tech__main-text">На&nbsp;курсе веб-разработки мы&nbsp;освоили технологии, которые применили в&nbsp;дипломном проекте.</p>
             </article>
             <div className="tech__container">
                 <p className="tech__card-text">HTML</p>

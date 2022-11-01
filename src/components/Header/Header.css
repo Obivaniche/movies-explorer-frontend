@@ -21,6 +21,7 @@
     padding: 0;
     margin: 29px 0;
     text-decoration: none;
+    font-weight: 500;
     font-size: 10px;
     line-height: 16px;
     color: #000000;
@@ -56,3 +57,25 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+
+    .header {
+        width: 768px;
+    }
+
+    .header__logo {
+        margin: 18px auto auto 30px;
+    }
+
+    .header__link {
+        font-size: 12px;
+    }
+
+    .header__link_enter {
+        height: 32px;
+        width: 76px;
+        margin: 21px 30px;
+        line-height: 32px;
+    }
+    
+}
