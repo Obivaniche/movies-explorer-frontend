@@ -1,6 +1,6 @@
 .about {
     width: 320px;
-    margin: 0 auto 0 auto;
+    margin: auto;
 }
 
 .about__title {
@@ -45,28 +45,37 @@
     width: 284px;
 }
 
-.about__green-line {
+.about__back {
+    display: flex;
+    flex-direction: column;
     margin: 60px 0 0 0;
     width: 100px;
-    height: 35px;
-    background-color: #2BE080;
     text-align: center;
+    gap: 10px;
 }
 
-.about__white-line {
+.about__front {
+    display: flex;
+    flex-direction: column;
     margin: 60px 0 0 0;
     width: 184px;
-    height: 35px;
-    background-color: #F2F2F2;
     text-align: center;
+    gap: 10px;
 }
 
-.about__week {
+.about__duration-front {
+    padding: 11px 0;
     font-size: 11px;
+    background-color: #F2F2F2;
 }
 
-.about__span {
-    margin: 21px auto 0 auto;
+.about__duration-back {
+    padding: 11px 0;
+    font-size: 11px;
+    background-color: #2BE080;
+}
+
+.about__sign {
     font-family: 'SuisseIntl';
     font-size: 11px;
     color: #A0A0A0;
@@ -80,7 +89,7 @@
     }
 
     .about__title {
-        margin: 70px auto 0 50px;
+        margin: 90px auto 0 50px;
         font-size: 22px;
         font-weight: 400;
         letter-spacing: -0.88px;
@@ -115,28 +124,27 @@
 
     .about__time-line {
         width: 668px;
+        margin: 0 auto 90px auto;
     }
 
-    .about__green-line {
+    .about__back {
         margin: 93px 0 0 0;
         width: 140px;
-        height: 36px;
+        gap: 14px;
     }
 
-    .about__white-line {
+    .about__front {
         margin: 93px 0 0 0;
         width: 528px;
-        height: 36px;
+        gap: 14px;
     }
 
-    .about__week {
+    .about__duration {
         font-size: 14px;
-        margin: 9px auto 0 auto;
+        padding: 9px 0;
     }
 
-    .about__span {
-        margin: 23px auto 0 auto;
-        height: 17px;
+    .about__sign {
         font-size: 14px;
     }
 }

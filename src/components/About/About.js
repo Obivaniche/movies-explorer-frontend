@@ -16,13 +16,13 @@ export default function About() {
                 </article>
             </div>
             <div className="about__time-line">
-                    <div className="about__green-line">
-                        <p className="about__week">1&nbsp;неделя</p>
-                        <p className="about__span">Back-end</p>
+                    <div className="about__back">
+                        <span className="about__duration-back">1&nbsp;неделя</span>
+                        <span className="about__sign">Back-end</span>
                     </div>
-                    <div className="about__white-line">
-                        <p className="about__week">4&nbsp;недели</p>
-                        <p className="about__span">Front-end</p>
+                    <div className="about__front">
+                        <span className="about__duration-front">4&nbsp;недели</span>
+                        <span className="about__sign">Front-end</span>
                     </div>
                 </div>
         </section>

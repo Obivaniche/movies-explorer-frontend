@@ -1,15 +1,11 @@
 .promo {
-    width: 320px;
-    height: 600px;
-    margin: 0 auto 0 auto;
-}
-
-.promo__container {
-    background-color: #F5F5F5;
     width: 292px;
     height: 586px;
     margin: 14px auto 0 auto;
+    background-color: #F5F5F5;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .promo__title {
@@ -18,8 +14,7 @@
     font-weight: 400;
     letter-spacing: -1.16px;
     text-align: center;
-    margin: 0;
-    padding: 220px 0 0 0;
+    margin: 220px auto 0 auto;
 }
 
 .promo__navbar {
@@ -61,11 +56,6 @@
 @media screen and (min-width: 768px) {
 
     .promo {
-        width: 768px;
-        height: 854px;
-    }
-
-    .promo__container {
         width: 728px;
         height: 834px;
         margin: 20px auto 0 auto;
@@ -78,7 +68,7 @@
         line-height: 52px;
         font-weight: 400;
         letter-spacing: -1.6px;
-        padding: 350px 0 0 0;
+        margin: 350px auto 0 auto;
     }
 
     .promo__navbar {

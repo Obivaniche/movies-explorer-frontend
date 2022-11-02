@@ -6,11 +6,11 @@ export default function Tech() {
     return (
         <section className="tech">
             <h2 className="tech__title">Технологии</h2>
-            <article className="tech__info">
+            <article className="tech__container">
                 <h3 className="tech__subtitle">7&nbsp;технологий</h3>
-                <p className="tech__main-text">На&nbsp;курсе веб-разработки мы&nbsp;освоили технологии, которые применили в&nbsp;дипломном проекте.</p>
+                <p className="tech__main-text">На&nbsp;курсе веб-разработки мы&nbsp;освоили технологии, которые применили в дипломном проекте.</p>
             </article>
-            <div className="tech__container">
+            <div className="tech__grid">
                 <p className="tech__card-text">HTML</p>
                 <p className="tech__card-text">CSS</p>
                 <p className="tech__card-text">JS</p>
