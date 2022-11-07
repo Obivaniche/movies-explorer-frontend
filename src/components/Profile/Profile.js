@@ -1,7 +1,6 @@
 import image from '../../images/image.jpg';
 import './Profile.css';
 import React from 'react';
-import { Link } from "react-router-dom";
 
 export default function Profile() {
     return (
@@ -19,8 +18,10 @@ export default function Profile() {
                         я&nbsp;понял, что хочу быть фронтенд-разработчиком. И&nbsp;вуаля. Спасибо, Яндекс.Практикум!</p>
                     </div>
                     <div className="profile__links">
-                        <Link className="profile__link">LinkedIn</Link>
-                        <Link className="profile__link">Github</Link>
+                        <a className="profile__link" href="https://www.linkedin.com/in/smirnov-v-v/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                        <a className="profile__link" href="https://github.com/Obivaniche" target="_blank"
+                        rel="noopener noreferrer">Github</a>
                     </div>
                 </div>
             </div>

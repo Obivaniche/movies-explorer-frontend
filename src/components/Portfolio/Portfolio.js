@@ -1,15 +1,17 @@
 import './Portfolio.css';
 import React from 'react';
-import { Link } from "react-router-dom";
 
 export default function Portfolio() {
     return (
         <section className="portfolio">
             <h2 className="portfolio__title">Портфолио</h2>
             <div className="portfolio__links">
-                <Link className="portfolio__link">Статичный сайт<span className="arrow">&#129125;</span></Link>
-                <Link className="portfolio__link">Адаптивный сайт<span className="arrow">&#129125;</span></Link>
-                <Link className="portfolio__link">Одностраничное приложение<span className="arrow">&#129125;</span></Link>
+                <a className="portfolio__link" href="https://obivaniche.github.io/how-to-learn/" target="_blank"
+                        rel="noopener noreferrer">Статичный сайт<span className="arrow">&#129125;</span></a>
+                <a className="portfolio__link" href="https://obivaniche.github.io/russian-travel/" target="_blank"
+                        rel="noopener noreferrer">Адаптивный сайт<span className="arrow">&#129125;</span></a>
+                <a className="portfolio__link" href="https://obivaniche.github.io/mesto/" target="_blank"
+                        rel="noopener noreferrer">Одностраничное приложение<span className="arrow">&#129125;</span></a>
             </div>
         </section >
     );
