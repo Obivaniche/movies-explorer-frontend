@@ -36,7 +36,7 @@
     margin: 50px auto 0 auto;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(2,84px);
+    grid-template-columns: repeat(2, 84px);
     gap: 10px;
 }
 
@@ -76,6 +76,7 @@
     .tech__subtitle {
         margin: 80px auto 0 auto;
         font-size: 50px;
+        line-height: 58px;
         letter-spacing: -2px;
     }
 
@@ -90,12 +91,50 @@
     .tech__grid {
         margin: 83px auto 90px auto;
         display: flex;
-        gap: 10px;
     }
 
     .tech__card-text {
         font-size: 12px;
         letter-spacing: -0.48px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .tech {
+        width: 1280px;
+    }
+
+    .tech__title {
+        margin: 100px auto 0 70px;
+    }
+
+    .tech__container {
+        width: 1140px;
+    }
+
+    .tech__subtitle {
+        margin: 90px auto 0 auto;
+    }
+
+    .tech__main-text {
+        margin: 26px auto 0 auto;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.56px;
+    }
+
+    .tech__grid {
+        margin: 100px auto 100px auto;
+    }
+
+    .tech__card-text {
+        width: 90px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+        letter-spacing: -0.56px;
     }
 
 }

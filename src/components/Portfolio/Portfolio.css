@@ -49,5 +49,59 @@
 }
 
 .arrow {
-    margin: 0 0 0 auto; 
+    margin: 0 0 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+
+    .portfolio {
+        width: 768px;
+        margin: 90px auto 0 auto;
+    }
+
+    .portfolio__title {
+        margin: 0 0 0 50px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .portfolio__links {
+        width: 668px;
+        margin: 50px auto 0 auto;
+    }
+
+    .portfolio__link {
+        width: 668px;
+        font-size: 28px;
+        line-height: 90px;
+        letter-spacing: -1.12px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .portfolio {
+        width: 1280px;
+        margin: 100px auto 0 auto;
+    }
+
+    .portfolio__title {
+        margin: 0 0 0 70px;
+    }
+
+    .portfolio__links {
+        width: 1140px;
+    }
+
+    .portfolio__link {
+        width: 1140px;
+        font-size: 30px;
+        letter-spacing: -1.2px;
+    }
+
+    .portfolio__link:last-of-type {
+        margin: 0 auto 85px 0;
+    }
+
 }

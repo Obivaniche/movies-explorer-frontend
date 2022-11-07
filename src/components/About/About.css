@@ -144,7 +144,73 @@
         padding: 9px 0;
     }
 
+    .about__duration-back {
+        font-size: 14px;
+    }
+
+    .about__duration-front {
+        font-size: 14px;
+    }
+
     .about__sign {
         font-size: 14px;
     }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .about {
+        width: 1280px;
+    }
+
+    .about__title {
+        margin: 110px auto 0 70px;  
+    }
+
+    .about__container {
+        width: 1140px;
+    }
+
+    .info:first-of-type {
+        margin: 70px 40px 0 0;
+    }
+
+    .info {
+        width: 550px;
+        margin: 70px 0 0 0;
+    }
+    
+    .info__text {
+        margin: 26px auto 0 auto;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .about__time-line {
+        width: 1140px;
+        margin: 0 auto 110px auto;
+    }
+
+    .about__back {
+        margin: 110px 0 0 0;
+        width: 228px;
+        gap: 14px;
+    }
+
+    .about__front {
+        margin: 110px 0 0 0;
+        width: 912px;
+        gap: 14px;
+    }
+
+    .about__duration {
+        font-size: 14px;
+        padding: 9px 0;
+    }
+
+    .about__sign {
+        font-size: 14px;
+    }
+    
 }

@@ -35,14 +35,21 @@
     font-weight: 500;
 }
 
-.profile__info {
+.profile__shotr-info {
+    margin: 20px 0 0 0;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.profile__full-info {
     margin: 20px 0 0 0;
     font-size: 11px;
     line-height: 16px;
 }
 
 .profile__links {
-    margin: 40px 0 0 14px;
+    margin: 40px 0 0 0;
 }
 
 .profile__link {
@@ -59,4 +66,103 @@
 
 .profile__link:hover {
     opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+
+    .profile {
+        width: 768px;
+    }
+
+    .profile__title {
+        margin: 90px auto 0 50px;
+        font-size: 22px;
+        letter-spacing: -0.88px;
+    }
+
+    .profile__container {
+        border-top: 1px solid black;
+        width: 668px;
+        margin: 23px auto 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .profile__image {
+        width: 255px;
+        height: 307px;
+        margin: 66px 0 0 0;
+    }
+
+    .profile__name {
+        margin: 66px 0 0 0;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
+    }
+
+    .profile__short-info {
+        margin: 16px 0 0 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .profile__full-info {
+        margin: 20px 49px 0 0;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .profile__links {
+        margin: 87px 0 0 0;
+    }
+
+    .profile__link {
+        margin: 0 20px 0 0;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    .profile {
+        width: 1280px;
+    }
+
+    .profile__title {
+        margin: 110px auto 0 70px;
+    }
+
+    .profile__container {
+        width: 1140px;
+    }
+
+    .profile__image {
+        width: 270px;
+        height: 327px;
+    }
+
+    .profile__name {
+        font-size: 50px;
+        line-height: 58px;
+        letter-spacing: -2px;
+    }
+
+    .profile__short-info {
+        margin: 18px 0 0 0;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .profile__full-info {
+        margin: 26px 270px 0 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .profile__links {
+        margin: 99px 0 0 0;
+    }
+
 }
