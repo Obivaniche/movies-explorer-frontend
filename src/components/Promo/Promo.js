@@ -1,16 +1,19 @@
-import './Promo.css';
 import React from 'react';
-import { Link } from "react-router-dom";
+import './Promo.css';
+import PropTypes from 'prop-types';
 
-export default function Promo() {
+function Promo({ headingText }) {
   return (
-    <section className="promo">
-        <h1 className="promo__title">Учебный проект студента факультета Веб-разработки.</h1>
-        <div className="promo__navbar">
-          <Link className="promo__link">О проекте</Link>
-          <Link className="promo__link">Технологии</Link>
-          <Link className="promo__link">Студент</Link>
-        </div>
-    </section>
+    <div className="landing__promo page__main-content-padding-top">
+      <h1 className="landing__heading">
+        {headingText}
+      </h1>
+    </div>
   );
 }
+
+Promo.propTypes = {
+  headingText: PropTypes.string.isRequired,
+};
+
+export default Promo;

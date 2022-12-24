@@ -1,30 +1,108 @@
-import image from '../../images/image.jpg';
-import './Profile.css';
+/* eslint-disable react/jsx-no-bind */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import './Profile.css';
+import PropTypes from 'prop-types';
+import useFormWithValidation from '../../hooks/useFormWithValidation';
+import PageWithForm from '../PageWithForm/PageWithForm';
+import FormFieldset from '../FormFieldset/FormFieldset';
 
-export default function Profile() {
-    return (
-        <section className="profile">
-            <h2 className="profile__title">Студент</h2>
-            <div className="profile__container">
-                <img className="profile__image" src={image} alt="Фото" />
-                <div>
-                    <div className="profile__bio">
-                        <h3 className="profile__name">Владислав</h3>
-                        <p className="profile__short-info">Фронтенд-разработчик, 31&nbsp;год</p>
-                        <p className="profile__full-info">Я&nbsp;живу в&nbsp;прекрасном и&nbsp;пасмурном Санкт-Петербурге. 
-                        Закончил СПБГУАП. Люблю слушать музыку и&nbsp;не&nbsp;люблю дожд,. Кодить я&nbsp;начал еще в&nbsp;школе, 
-                        но&nbsp;профессией это стало совсем недавно. Работая в&nbsp;компанни BLIZKO.RU контент-редактором, 
-                        я&nbsp;понял, что хочу быть фронтенд-разработчиком. И&nbsp;вуаля. Спасибо, Яндекс.Практикум!</p>
-                    </div>
-                    <div className="profile__links">
-                        <a className="profile__link" href="https://www.linkedin.com/in/smirnov-v-v/" target="_blank"
-                        rel="noopener noreferrer">LinkedIn</a>
-                        <a className="profile__link" href="https://github.com/Obivaniche" target="_blank"
-                        rel="noopener noreferrer">Github</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+function Profile({
+  userName, onSubmit, onLogout, isSubmitting, staticContent,
+}) {
+  const { submitBtnText, logoutBtnText } = staticContent;
+  const {
+    values, setValues, handleChangeInput, errors, isValid, resetFrom,
+  } = useFormWithValidation();
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    onSubmit();
+  }
+  function handleLogout(evt) {
+    evt.preventDefault();
+    onLogout();
+  }
+
+  return (
+    <main className="profile page__main-content page__main-content-padding-top">
+      <PageWithForm
+        pageType="profile"
+        formStyle="profile"
+        heading={`Привет, ${userName}!`}
+        isLogo={false}
+        formName="profile"
+        submitBtnText={isSubmitting.forSubmitBtn ? submitBtnText.default : submitBtnText.isLoading}
+        logoutBtnText={isSubmitting.forLogoutBtn ? logoutBtnText.default : logoutBtnText.isLoading}
+        onSubmit={handleSubmit}
+        submitButtonState={isValid}
+        logoutSection={{
+          onLogout: handleLogout,
+        }}
+      >
+        <FormFieldset
+          inputs={[
+            {
+              inputStyle: 'profile',
+              labelName: 'Имя',
+              inputName: 'name',
+              inputType: 'text',
+              onChange: handleChangeInput,
+              error: errors.name,
+              inputValue: values.name,
+              placeholder: 'Имя',
+              isRequired: true,
+              minLength: 2,
+              maxLength: 15,
+              id: 1,
+            },
+            {
+              inputStyle: 'profile',
+              labelName: 'E-mail',
+              inputName: 'email',
+              inputType: 'email',
+              onChange: handleChangeInput,
+              error: errors.email,
+              inputValue: values.email,
+              placeholder: 'email',
+              isRequired: true,
+              minLength: 6,
+              maxLength: 30,
+              id: 2,
+            },
+          ]}
+        />
+      </PageWithForm>
+    </main>
+  );
 }
+
+Profile.propTypes = {
+  userName: PropTypes.string,
+  onSubmit: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  isSubmitting: PropTypes.shape({
+    forSubmitBtn: PropTypes.bool.isRequired,
+    forLogoutBtn: PropTypes.bool.isRequired,
+  }),
+  staticContent: PropTypes.shape({
+    submitBtnText: PropTypes.shape({
+      default: PropTypes.string.isRequired,
+      isLoading: PropTypes.string.isRequired,
+    }).isRequired,
+    logoutBtnText: PropTypes.shape({
+      default: PropTypes.string.isRequired,
+      isLoading: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
+Profile.defaultProps = {
+  userName: 'друг',
+  isSubmitting: {
+    forSubmitBtn: true,
+    forLogoutBtn: true,
+  },
+};
+
+export default Profile;

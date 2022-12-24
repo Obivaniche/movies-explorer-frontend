@@ -1,18 +1,41 @@
-import './Portfolio.css';
 import React from 'react';
+import './Portfolio.css';
+import PropTypes from 'prop-types';
 
-export default function Portfolio() {
-    return (
-        <section className="portfolio">
-            <h2 className="portfolio__title">Портфолио</h2>
-            <div className="portfolio__links">
-                <a className="portfolio__link" href="https://obivaniche.github.io/how-to-learn/" target="_blank"
-                        rel="noopener noreferrer">Статичный сайт<span className="arrow">&#129125;</span></a>
-                <a className="portfolio__link" href="https://obivaniche.github.io/russian-travel/" target="_blank"
-                        rel="noopener noreferrer">Адаптивный сайт<span className="arrow">&#129125;</span></a>
-                <a className="portfolio__link" href="https://obivaniche.github.io/mesto/" target="_blank"
-                        rel="noopener noreferrer">Одностраничное приложение<span className="arrow">&#129125;</span></a>
-            </div>
-        </section >
-    );
+function Portfolio({ heading, data }) {
+  return (
+    <section className="portfolio">
+      <h4 className="portfolio__heading">
+        {heading}
+      </h4>
+      <ul className="portfolio__list">
+        {
+          data.map((item) => (
+            <li className="portfolio__link-wrapper page__link" key={item.id}>
+              <a className="portfolio__link" target="_blank" rel="noreferrer" href={item.link}>
+                <p className="portfolio__name">
+                  {item.name}
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  );
 }
+
+Portfolio.propTypes = {
+  heading: PropTypes.string,
+  data: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  })).isRequired,
+};
+
+Portfolio.defaultProps = {
+  heading: 'Портфолио',
+};
+
+export default Portfolio;

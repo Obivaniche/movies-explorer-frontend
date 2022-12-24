@@ -1,110 +1,42 @@
-.promo {
-    width: 292px;
-    height: 586px;
-    margin: 14px auto 0 auto;
-    background-color: #F5F5F5;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+.landing__promo {
+  background: #F3C1F8 url(../../images/pic_promo_background.svg) no-repeat 50% 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.promo__title {
-    font-size: 29px;
-    line-height: 37px;
-    font-weight: 400;
-    letter-spacing: -1.16px;
-    text-align: center;
-    margin: 220px auto 0 auto;
+@media screen and (max-width: 424px) {
+  .landing__promo {
+    background-size: 77.5%;
+  }
 }
 
-.promo__navbar {
-    width: 258px;
-    margin: 212px auto 0 auto;
-    display: flex;
+.landing__heading {
+  margin: 184px 0 224px 0;
+  max-width: 730px;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 50px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
 }
 
-.promo__link {
-    height: 26px;
-    width: 82px;
-    margin: 0 6px 0 0;
-    padding: 0;
-    background-color: #E8E8E8;
-    border: none;
-    border-radius: 3px;
-    color: #000000;
-    font-size: 10px;
-    line-height: 26px;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-transition: opacity .4s linear;
-    -o-transition: opacity .4s linear;
-    transition: opacity .4s linear;
-    cursor: pointer;
+@media screen and (max-width: 768px) {
+  .landing__heading {
+    margin: 326px 0 342px 0;
+  }
 }
 
-.promo__link:last-of-type {
-    margin: 0;
+@media screen and (max-width: 490px) {
+  .landing__heading {
+    margin: 207px 0 246px 0;
+    width: 300px;
+    font-size: 31px;
+    line-height: 1.26;
+  }
 }
 
-.promo__link:hover {
-    opacity: 0.8;
-}
-
-@media screen and (min-width: 768px) {
-
-    .promo {
-        width: 728px;
-        height: 834px;
-        margin: 20px auto 0 auto;
-    }
-
-    .promo__title {
-        margin: 0 auto;
-        width: 680px;
-        font-size: 40px;
-        line-height: 52px;
-        font-weight: 400;
-        letter-spacing: -1.6px;
-        margin: 350px auto 0 auto;
-    }
-
-    .promo__navbar {
-        width: 308px;
-        margin: 314px auto 0 auto;
-        display: flex;
-    }
-
-    .promo__link {
-        width: 96px;
-        height: 36px;
-        margin: 0 10px 0 0;
-        font-size: 12px;
-        line-height: 36px;
-    }
-    
-}
-
-@media screen and (min-width: 1280px) {
-
-    .promo {
-        width: 1200px;
-        height: 493px;
-    }
-
-    .promo__title {
-        width: 730px;
-        font-size: 50px;
-        line-height: 58px;
-        letter-spacing: -2px;
-        margin: 160px auto 0 auto;
-    }
-
-    .promo__navbar {
-        margin: 151px auto 0 auto;
-    }
-    
-}
 
