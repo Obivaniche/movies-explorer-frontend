@@ -26,7 +26,6 @@ export class Api {
 
 const api = new Api({
     adress: 'https://api.nomoreparties.co/beatfilm-movies',
-    //token : '86724e9f-206a-43a9-ab92-a5e8d301d078'
 })
 
 export default api;

@@ -41,7 +41,7 @@ export class MainApi {
         .then(this._checkResponse)
     }
 
-    //добавление в избранное
+    // добавление в избранное
     createMovie(data) {
         return fetch(`${this._adress}/movies`, {
             method: "POST",
@@ -78,7 +78,7 @@ export class MainApi {
         .then(this._checkResponse)
     }
 
-    //метод проверки ответа от сервера
+    // метод проверки ответа от сервера
     _checkResponse(response) {
         // тут проверка ответа
         if (response.ok) {
@@ -88,12 +88,9 @@ export class MainApi {
     }
 }
 
-
-
 const mainApi = new MainApi({
-    adress: 'https://api.jet.nomoredomains.work', //мой бэк
+    adress: 'https://api.jet.nomoredomains.work', // мой бэк
     apiURL: 'https://api.nomoreparties.co' // бэк с фильмами
-    //token : '86724e9f-206a-43a9-ab92-a5e8d301d078'
 })
 
 export default mainApi;

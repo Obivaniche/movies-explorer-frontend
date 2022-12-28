@@ -3,15 +3,19 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
-    justify-content: flex-end;
     margin-right: 70px;
     height: 32px;
     /*border: 1px solid rgba(255, 44, 44, 0.7);*/
 }
 
-@media screen and (max-width: 768px) {
+.NavBar__container_logout {
+    justify-content: end;
+}
+
+@media screen and (max-width: 1025px) {
     .NavBar__container {
         margin-right: 30px;
+        justify-content: end;
     }
 }
 
@@ -19,5 +23,6 @@
     .NavBar__container {
         margin: auto 14px auto 0;
         height: 100%;
+        justify-content: end;
     }
 }

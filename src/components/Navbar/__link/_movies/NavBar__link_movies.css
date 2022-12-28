@@ -7,7 +7,6 @@
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
-    margin-left: 16px;
 }
 
 .NavBar__link_movies_text{
@@ -19,7 +18,15 @@
     font-size: 13px;
     line-height: 18px;
     text-decoration: none;
-    margin-left: 16px;
+    margin-right: 16px;
+    
+}
+.NavBar__link_movies_text:first-of-type{
+    margin-left: 40px;
+}
+
+.NavBar__link_movies_text:last-of-type{
+    margin-right: 0;
 }
 
 .NavBar__link_movies_text:hover {

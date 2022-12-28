@@ -7,13 +7,12 @@
     margin: 0;
     background-color: #E8E8E8;
     border: none;
-    transition: opacity .4s linear;
     cursor: pointer;
 }
 
 .NavTab__techs:hover {
-    opacity: .8;
     background-color: #2BE080;
+    transition: 0.7s
 }
 
 @media screen and (max-width: 321px) {

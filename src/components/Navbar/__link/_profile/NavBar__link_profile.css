@@ -18,6 +18,7 @@
 
 .NavBar__link_profile:hover {
     background: #2BE080;
+    transition: 0.7s;
     border-radius: 20px;
 }
 
