@@ -1,19 +1,12 @@
 import React from 'react';
-import './Promo.css';
-import PropTypes from 'prop-types';
 
-function Promo({ headingText }) {
-  return (
-    <div className="landing__promo page__main-content-padding-top">
-      <h1 className="landing__heading">
-        {headingText}
-      </h1>
-    </div>
-  );
+function Promo({children}) {
+    return (
+        <section className="Promo">
+            <h1 className="Promo__title">Учебный проект студента факультета Веб-разработки.</h1>
+            {children}
+        </section>
+    );
 }
-
-Promo.propTypes = {
-  headingText: PropTypes.string.isRequired,
-};
 
 export default Promo;

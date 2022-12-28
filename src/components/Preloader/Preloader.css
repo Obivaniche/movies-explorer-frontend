@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /*width: 100%;*/
     height: 100%;
     z-index: 10;
     padding: 20px;
@@ -61,7 +61,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: #F3C1F8;
+    background: #2BE080;
     border-radius: 50px;
 }
 
@@ -77,12 +77,12 @@
 }
 
 .preloader__round::after {
-    background: #FFFFFF;
+    background: white;
     animation: preloader-inside-white 1s ease-in-out infinite;
 }
 
 .preloader__round::before {
     z-index: 10;
-    background: #F3C1F8;
+    background: #34e076;
     animation: preloader-inside-red 1s ease-in-out infinite;
 }

@@ -1,108 +1,138 @@
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import './Profile.css';
-import PropTypes from 'prop-types';
-import useFormWithValidation from '../../hooks/useFormWithValidation';
-import PageWithForm from '../PageWithForm/PageWithForm';
-import FormFieldset from '../FormFieldset/FormFieldset';
+import {useState, useEffect} from 'react';
+import {useContext} from 'react';
+import {useForm} from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
+import CurrentUserContext from '../../contexts/CurrentUserContext';
 
-function Profile({
-  userName, onSubmit, onLogout, isSubmitting, staticContent,
-}) {
-  const { submitBtnText, logoutBtnText } = staticContent;
-  const {
-    values, setValues, handleChangeInput, errors, isValid, resetFrom,
-  } = useFormWithValidation();
+function Profile ({onUpdateUser, signOut}) {
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    onSubmit();
-  }
-  function handleLogout(evt) {
-    evt.preventDefault();
-    onLogout();
-  }
+    const currentUser = useContext(CurrentUserContext);
+    const { register, handleSubmit, formState: { errors } } = useForm({criteriaMode: "all"});
+    
+    // Стейт, в котором содержится значение инпута - name, mail
+    const [name, setInputName] = useState(currentUser.name);
+    const [email, setInputEmail] = useState(currentUser.email);
 
-  return (
-    <main className="profile page__main-content page__main-content-padding-top">
-      <PageWithForm
-        pageType="profile"
-        formStyle="profile"
-        heading={`Привет, ${userName}!`}
-        isLogo={false}
-        formName="profile"
-        submitBtnText={isSubmitting.forSubmitBtn ? submitBtnText.default : submitBtnText.isLoading}
-        logoutBtnText={isSubmitting.forLogoutBtn ? logoutBtnText.default : logoutBtnText.isLoading}
-        onSubmit={handleSubmit}
-        submitButtonState={isValid}
-        logoutSection={{
-          onLogout: handleLogout,
-        }}
-      >
-        <FormFieldset
-          inputs={[
-            {
-              inputStyle: 'profile',
-              labelName: 'Имя',
-              inputName: 'name',
-              inputType: 'text',
-              onChange: handleChangeInput,
-              error: errors.name,
-              inputValue: values.name,
-              placeholder: 'Имя',
-              isRequired: true,
-              minLength: 2,
-              maxLength: 15,
-              id: 1,
-            },
-            {
-              inputStyle: 'profile',
-              labelName: 'E-mail',
-              inputName: 'email',
-              inputType: 'email',
-              onChange: handleChangeInput,
-              error: errors.email,
-              inputValue: values.email,
-              placeholder: 'email',
-              isRequired: true,
-              minLength: 6,
-              maxLength: 30,
-              id: 2,
-            },
-          ]}
-        />
-      </PageWithForm>
-    </main>
-  );
+    // Обработчики изменения инпута обновляют стейт
+
+    function handleChangeName(e) {
+        setInputName(e.target.value);
+    }
+
+    function handleChangeEmail(e) {
+        setInputEmail(e.target.value);
+    }
+
+    // После загрузки текущего пользователя из API
+    // его данные будут использованы в управляемых компонентах.
+    useEffect(() => {
+        setInputName(currentUser.name);
+        setInputEmail(currentUser.email);
+    }, [currentUser]);
+
+    //Отправляем данные на сервер
+    function onSubmit() {
+        // Запрещаем браузеру переходить по адресу формы
+        // Передаём значения управляемых компонентов во внешний обработчик
+        onUpdateUser({
+            name,
+            email
+        });
+    }
+
+    //очищаем инпуты при каждом открытии модального окна
+    /*useEffect(() => {
+        if (isOpen) {
+            setMail('');
+            setPassword('')
+        }
+    }, [isOpen])*/
+
+    return (
+        <div>
+            <div className="FormList__container">
+                <h2 className="Profile__title">Привет, {currentUser.name}!</h2>
+
+                <form name ={'Аккаунт'} onSubmit={handleSubmit(onSubmit)}>
+                    <div className="FormList__form">
+                        <div className="Profile__label">
+                            <h2 className="Profile__input_name"> Имя
+                                <input
+                                    placeholder = "Имя"
+                                    {...register("Name", {
+                                        required: "Это обязательное поле",
+                                        minLength: {
+                                            value: 2,
+                                            message: "Имя должно быть не короче 2 символов"
+                                        },
+                                        maxLength: {
+                                            value: 30,
+                                            message: "Имя должно быть не более 30 символов"
+                                        }
+                                    })}
+                                    value={name || ''}
+                                    onChange={handleChangeName}
+                                    type="text"
+                                    className="Profile__input Profile__input_text_namePlace"
+                                />
+                                
+                            </h2>
+                            <ErrorMessage
+                                errors={errors}
+                                name="Name"
+                                render={({ messages }) =>
+                                    messages &&
+                                    Object.entries(messages).map(([type, message]) => (
+                                    <p className="Profile__input-error" key={type}>{message}</p>
+                                ))}
+                            />
+                        </div>
+                        
+                        <div className="Profile__label">
+                            <h2 className="Profile__input_name"> E-mail
+                            <input
+                                placeholder = "E-mail"
+                                {...register("Email", {
+                                    required: "Это обязательное поле",
+                                    pattern: {
+                                        value: /\S+@\S+\.\S+/,
+                                        message: "Не верный формат почты"
+                                    }
+                                })}
+                                value={email || ''}
+                                onChange={handleChangeEmail}
+                                type="text"
+                                className="Profile__input Profile__input_text_namePlace"
+                            />
+                            </h2>
+                            <ErrorMessage
+                                errors={errors}
+                                name="Email"
+                                render={({ messages }) =>
+                                    messages &&
+                                    Object.entries(messages).map(([type, message]) => (
+                                    <p className="Profile__input-error" key={type}>{message}</p>
+                                ))}
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="Profile__button">
+                        <button className="Profile__button_item" type ="submit"
+                            aria-label="saveButton">Редактировать
+                        </button>
+                    </div>
+                </form>
+                <button to='' className="Profile__button_item" onClick= {signOut}
+                    aria-label="signOutButton">Выйти из аккаунта
+                </button>
+            </div>
+        </div>
+
+        
+    )
+
 }
-
-Profile.propTypes = {
-  userName: PropTypes.string,
-  onSubmit: PropTypes.func.isRequired,
-  onLogout: PropTypes.func.isRequired,
-  isSubmitting: PropTypes.shape({
-    forSubmitBtn: PropTypes.bool.isRequired,
-    forLogoutBtn: PropTypes.bool.isRequired,
-  }),
-  staticContent: PropTypes.shape({
-    submitBtnText: PropTypes.shape({
-      default: PropTypes.string.isRequired,
-      isLoading: PropTypes.string.isRequired,
-    }).isRequired,
-    logoutBtnText: PropTypes.shape({
-      default: PropTypes.string.isRequired,
-      isLoading: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
-Profile.defaultProps = {
-  userName: 'друг',
-  isSubmitting: {
-    forSubmitBtn: true,
-    forLogoutBtn: true,
-  },
-};
 
 export default Profile;

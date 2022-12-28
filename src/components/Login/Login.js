@@ -1,95 +1,45 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-return-assign */
-/* eslint-disable react/jsx-no-bind */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import './Login.css';
-import PropTypes from 'prop-types';
-import PageWithForm from '../PageWithForm/PageWithForm';
-import useFormWithValidation from '../../hooks/useFormWithValidation';
-import FormFieldset from '../FormFieldset/FormFieldset';
+import { useState } from 'react';
+import {Link} from 'react-router-dom';
+import FormList from '../FormList/FormList';
+import FormComponent from '../FormComponent/FormComponent';
+import {useFormWithValidation} from "../../hooks/useForm"
 
-function Login({
-  onLogin, isSubmitting, serverRequestStatus, staticContent,
-}) {
-  const { heading, submitBtnText, redirectionSection } = staticContent;
-  // контроль инпутов и валидация
-  const {
-    values, setValues, handleChangeInput, errors, isValid, resetFrom,
-  } = useFormWithValidation();
+function Login ({authorization}) {
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    onLogin();
-  }
+    const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
-  return (
-    <main className="login page__main-content">
-      <PageWithForm
-        heading={heading}
-        formName="login"
-        submitBtnText={isSubmitting ? submitBtnText.default : submitBtnText.isLoading}
-        onSubmit={handleSubmit}
-        submitButtonState={isValid}
-        redirectionSection={redirectionSection}
-      >
-        <FormFieldset
-          inputs={[
-            {
-              inputStyle: 'auth',
-              labelName: 'E-mail',
-              inputName: 'email',
-              inputType: 'email',
-              onChange: handleChangeInput,
-              error: errors.email,
-              inputValue: values.email,
-              placeholder: 'email',
-              isRequired: true,
-              minLength: 6,
-              maxLength: 30,
-              id: 1,
-            },
-            {
-              inputStyle: 'auth',
-              labelName: 'Пароль',
-              inputName: 'password',
-              inputType: 'password',
-              onChange: handleChangeInput,
-              error: errors.password,
-              inputValue: values.password,
-              placeholder: 'пароль',
-              isRequired: true,
-              minLength: 8,
-              id: 2,
-            },
-          ]}
-        />
-      </PageWithForm>
-    </main>
-  );
+    //Отправляем данные на сервер
+    function handleSubmit(e) {
+        // Запрещаем браузеру переходить по адресу формы
+        e.preventDefault();
+        // Передаём значения управляемых компонентов во внешний обработчик
+        authorization( values.email, values.password );
+        
+    }
+
+    return (
+        <div>
+            <FormList
+                title = {'Рады видеть!'} onSubmit={handleSubmit}
+                name={'Вход'}  buttonText = {'Войти'}
+            >
+                <FormComponent name = {'E-mail'} value = {values.email || ''} onChange = {handleChange}
+                    minLength = {'1'} maxLength = {'30'} required type = {'email'} nameInput ={'email'}
+                />
+                <p className="Formlist__input-error">{errors.email}</p>
+                
+                <FormComponent name = {'Пароль'} value = {values.password || ''} onChange = {handleChange}
+                    minLength = {'4'}  required type = {'password'} nameInput ={'password'}
+                />
+                <p className="Formlist__input-error">{errors.password}</p>
+            </FormList>
+            <p className="FormList__button_span">Ещё не зарегистрированы?
+                <Link className="FormList__button_link" to='/signup'> Регистрация</Link>
+            </p>
+        </div>
+    )
+
 }
-
-Login.propTypes = {
-  onLogin: PropTypes.func.isRequired,
-  isSubmitting: PropTypes.bool,
-  serverRequestStatus: PropTypes.string,
-  staticContent: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    submitBtnText: PropTypes.shape({
-      default: PropTypes.string.isRequired,
-      isLoading: PropTypes.string.isRequired,
-    }).isRequired,
-    redirectionSection: PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      linkText: PropTypes.string.isRequired,
-    }).isRequired,
-  }).isRequired,
-};
-
-Login.defaultProps = {
-  isSubmitting: true,
-  serverRequestStatus: 'success',
-};
 
 export default Login;

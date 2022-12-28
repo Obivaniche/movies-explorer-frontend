@@ -1,55 +1,73 @@
 import React from 'react';
-import './Techs.css';
-import PropTypes from 'prop-types';
-import SectionHeading from '../Ui/SectionHeading/SectionHeading';
-import ContentHeading from '../Ui/ContentHeading/ContentHeading';
-import SkillFeed from '../SkillFeed/SkillFeed';
+import MainStack from '../MainStack/MainStack';
+import NavIcon from '../NavIcon/NavIcon';
 
-function Techs({
-  sectionHeading, contentHeading, description, skills,
-}) {
-  return (
-    <div className="page__section page__section_background-color_grey" id="techs">
-      <section className="section techs">
-        <SectionHeading
-          headingText={sectionHeading}
-        />
-        <div className="techs__content-wrapper">
-          <div className="techs__text">
-            <ContentHeading
-              headingText={contentHeading}
-            />
-            <p className="techs__subtitle">
-              {description}
-            </p>
-          </div>
-          <SkillFeed
-            data={skills}
-          />
+function Techs () {
+
+    const titleIcon = {
+        id1: 'HTML',
+        id2: 'CSS',
+        id3: 'JS',
+        id4: 'React',
+        id5: 'Git',
+        id6: 'Express.js',
+        id7: 'mongoDB'
+    }
+
+    return (
+        <div className="Techs">
+            <MainStack stackName = {'Технологии'}>
+                <h1 className = "Techs__title">7 технологий</h1>
+                <p className = "Techs__description">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
+                <section className = {'Techs__elements'}>
+                    <NavIcon 
+                        to={''}
+                        titleIcon = {titleIcon.id1} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />
+                    <NavIcon
+                        to={''}
+                        titleIcon = {titleIcon.id2} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />
+                    <NavIcon
+                        to={''}  
+                        titleIcon = {titleIcon.id3} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />
+                    <NavIcon 
+                        to={''}
+                        titleIcon = {titleIcon.id4} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'}
+
+                    />
+                    <NavIcon 
+                        to={''} 
+                        titleIcon = {titleIcon.id5} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />
+                    <NavIcon 
+                        to={''} 
+                        titleIcon = {titleIcon.id6} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />
+                    <NavIcon 
+                        to={''} 
+                        titleIcon = {titleIcon.id7} 
+                        iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
+                        navTabStyle = {'Techs__navTab'} 
+                    />      
+                </section>
+
+            </MainStack>
         </div>
-      </section>
-    </div>
-  );
+    );
 }
-
-Techs.propTypes = {
-  sectionHeading: PropTypes.string.isRequired,
-  contentHeading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  skills: PropTypes.arrayOf(PropTypes.shape({
-    skill: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-  })),
-};
-
-Techs.defaultProps = {
-  skills: [
-    { skill: 'HTML', id: 1 },
-    { skill: 'CSS', id: 2 },
-    { skill: 'JS', id: 3 },
-    { skill: 'React', id: 4 },
-    { skill: 'Git', id: 5 },
-  ],
-};
 
 export default Techs;

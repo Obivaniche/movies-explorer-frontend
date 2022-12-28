@@ -1,38 +1,42 @@
-/* eslint-disable react/jsx-no-bind */
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import './NavTab.css';
-import PropTypes from 'prop-types';
+import NavIcon from '../NavIcon/NavIcon';
 
-function NavTab({ links }) {
-  // настройки скролла к блоку по клику по ссылке
-  function scrollIntoView(el) {
-    el.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
-  return (
-    <ul className="landing__nav">
-      {
-        links.map((link) => (
-          <li className="landing__link-wrapper" key={link.id}>
-            <HashLink className="landing__link page__link" to={link.path} scroll={scrollIntoView}>
-              {link.heading}
-            </HashLink>
-          </li>
-        ))
-      }
-    </ul>
-  );
+
+function NavTab () {
+
+    const titleIcon = {
+        id1: 'О проекте',
+        id2: 'Технологии',
+        id3: 'Студент'
+    }
+
+    return (
+        <section className="NavTab">
+            <section className= 'NavTab__elements'>
+                    <NavIcon
+                        to={"MainStack__title"}
+                        titleIcon={titleIcon.id1}
+                        iconStyle={'NavTab__icon'}
+                        textStyle ={'NavTab__buttonText'}
+                        navTabStyle={'NavTab__techs'} 
+                    />
+                    <NavIcon 
+                        to={"Techs"}
+                        titleIcon = {titleIcon.id2}
+                        iconStyle = {'NavTab__icon'} textStyle = {'NavTab__buttonText'}
+                        navTabStyle = {'NavTab__techs'}
+                        className = "opacity"
+                    /> 
+                    <NavIcon 
+                        to={"student"}
+                        titleIcon = {titleIcon.id3}
+                        iconStyle = {'NavTab__icon'} textStyle = {'NavTab__buttonText'}
+                        navTabStyle = {'NavTab__techs'} 
+                    />      
+                </section>
+                
+        </section>
+    );
 }
-
-NavTab.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.shape({
-    heading: PropTypes.string.isRequired,
-    path: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-  })).isRequired,
-};
 
 export default NavTab;

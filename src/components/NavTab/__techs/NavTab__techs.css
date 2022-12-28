@@ -1,0 +1,25 @@
+.NavTab__techs {
+    display: flex;
+    justify-content: center;
+    max-width: 96px;
+    height: 36px;
+    border-radius: 10px;
+    margin: 0;
+    background-color: #E8E8E8;
+    border: none;
+    transition: opacity .4s linear;
+    cursor: pointer;
+}
+
+.NavTab__techs:hover {
+    opacity: .8;
+    background-color: #2BE080;
+}
+
+@media screen and (max-width: 321px) {
+    .NavTab__techs {
+        max-width: 82px;
+        height: 26px;
+        border-radius: 6px;
+    }
+}
