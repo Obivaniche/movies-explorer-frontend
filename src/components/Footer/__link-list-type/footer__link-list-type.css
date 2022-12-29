@@ -1,0 +1,17 @@
+.footer__link-list-type {
+    color: #000000;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none;
+    margin: 0 auto 12px 20px;
+}
+
+.footer__link-list-type:hover {
+    text-shadow: 0.8px 0 0 #000000;
+}
+
+@media screen and (max-width:390px) {
+    .footer__link-list-type {
+        margin: 0 auto 12px auto;
+    }
+}
