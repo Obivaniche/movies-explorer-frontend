@@ -80,7 +80,7 @@ export class MainApi {
 
     // метод проверки ответа от сервера
     _checkResponse(response) {
-        // тут проверка ответа
+        // проверка ответа
         if (response.ok) {
             return response.json();
         }
@@ -89,7 +89,7 @@ export class MainApi {
 }
 
 const mainApi = new MainApi({
-    adress: 'https://api.jet.nomoredomains.work', // мой бэк
+    adress: 'https://api.obivaniche-movies.nomoredomains.club', // мой бэк
     apiURL: 'https://api.nomoreparties.co' // бэк с фильмами
 })
 
