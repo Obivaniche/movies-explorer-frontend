@@ -10,7 +10,7 @@ import Register from '../Register/Register';
 import Profile from '../Profile/Profile';
 import NotFound from '../NotFound/NotFound';
 import Movies from '../Movies/Movies';
-import NavBar from '../Navbar/NavBar';
+import NavBar from '../NavBar/NavBar';
 import mainApi from "../../utils/MainApi";
 import * as Auth from '../Auth/Auth';
 import Popup from '../Popup/Popup';

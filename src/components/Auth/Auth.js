@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.jet.nomoredomains.work';
+export const BASE_URL = 'https://obivaniche-movies.nomoredomains.club';
 
 // проверка ответа от сервера
 const checkResponse = (response) => {
@@ -12,7 +12,7 @@ export const register = (name, email, password) => {
     return fetch(`${BASE_URL}/signup`, {
         method: 'POST',
         headers: {
-        //'Accept': 'application/json',
+        // 'Accept': 'application/json',
         'Content-Type': 'application/json'
         },
         credentials: 'include', // теперь куки посылаются вместе с запросом
@@ -34,12 +34,12 @@ export const authorize = (email, password) => {
         body: JSON.stringify({email, password})
     })
     .then(checkResponse)
-    /*.then((data) => {
-        //console.log(data)
+    /* .then((data) => {
+        // console.log(data)
         // сохраняем токен в localStorage
         localStorage.setItem('jwt', data.token);
         return data;
-    })*/
+    }) */
     .catch(err => console.log(err))
 };
 
@@ -56,9 +56,9 @@ export const logout = () => {
 }
 
 
-//Запрос для проверки валидности токена и получения email для вставки в шапку сайта
-/*export const tokenCheck  = (token) => {
-    //console.log(token)
+// Запрос для проверки валидности токена и получения email для вставки в шапку сайта
+/* export const tokenCheck  = (token) => {
+    // console.log(token)
     return fetch(`${BASE_URL}/users/me`, {
         method: 'GET',
         headers: {
@@ -66,9 +66,9 @@ export const logout = () => {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`,
         },
-        //credentials: 'include'
+        // credentials: 'include'
     })
-    //.then(checkResponse)
+    // .then(checkResponse)
     .then(res => res.json())
     .then(data => data)
-}*/
+} */
