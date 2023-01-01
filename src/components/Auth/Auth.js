@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://obivaniche-movies.nomoredomains.club';
+export const BASE_URL = 'https://api.obivaniche-movies.nomoredomains.club';
 
 // проверка ответа от сервера
 const checkResponse = (response) => {
