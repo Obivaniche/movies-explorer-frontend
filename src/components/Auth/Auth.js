@@ -16,7 +16,7 @@ export const register = (name, email, password) => {
         'Content-Type': 'application/json'
         },
         credentials: 'include', // теперь куки посылаются вместе с запросом
-        body: JSON.stringify({name, password, email})
+        body: JSON.stringify({name, email, password})
     })
     .then(checkResponse)
 };
