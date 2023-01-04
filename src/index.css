@@ -26,17 +26,17 @@
 @import url('./components/FormComponent/__input/_type_error/popup__input_type_error.css');
 
 @import url('./components/NavBar/NavBar.css');
-@import url('./components/Navbar/__container/NavBar__container.css');
-@import url('./components/Navbar/__link/_startScreen/NavBar__link_startScreen.css');
-@import url('./components/Navbar/__link/_movies/NavBar__link_movies.css');
-@import url('./components/Navbar/__link/_profile/NavBar__link_profile.css');
+@import url('./components/NavBar/__container/NavBar__container.css');
+@import url('./components/NavBar/__link/_startScreen/NavBar__link_startScreen.css');
+@import url('./components/NavBar/__link/_movies/NavBar__link_movies.css');
+@import url('./components/NavBar/__link/_profile/NavBar__link_profile.css');
 
 @import url('./components/NavTab/NavTab.css');
 @import url('./components/NavTab/__list/NavTab__list.css');
 @import url('./components/NavTab/__link-list-type/NavTab__link-list-type.css');
 @import url('./components/NavTab/__buttonText/NavTab__buttonText.css');
 @import url('./components/NavTab/__icon/NavTab__icon.css');
-@import url('./components/NavTab/__elements/navTab__elements.css');
+@import url('./components/NavTab/__elements/NavTab__elements.css');
 @import url('./components/NavTab/__techs/NavTab__techs.css');
 
 
@@ -104,7 +104,7 @@
 @import url('./components/Techs/__elements/Techs__elements.css');
 @import url('./components/Techs/__icon/Techs__icon.css');
 @import url('./components/Techs/__iconText/Techs__iconText.css');
-@import url('./components/Techs/__navTab/Techs__navTab.css');
+@import url('./components/Techs/__NavTab/Techs__NavTab.css');
 
 @import url('./components/Portfolio/Portfolio.css');
 @import url('./components/Portfolio/__space/portfolio__space.css');
