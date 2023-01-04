@@ -58,7 +58,7 @@
 @import url('./components/Movies/__elements/Movies__elements.css');
 @import url('./components/Movies/__container/Movies__container.css');
 @import url('./components/Movies/__search/Movies__search.css');
-@import url('./components/Movies/__search-checkbox/__search-checkbox.css');
+@import url('./components/Movies/__search-checkbox/Movies__search-checkbox.css');
 @import url('./components/Movies/__search-button/Movies__search-button.css');
 @import url('./components/Movies/__search-icon/Movies__search-icon.css');
 @import url('./components/Movies/__search-input/Movies__search-input.css');
@@ -129,7 +129,7 @@
 @import url('./components/Popup/infoToolTip/_image/popup__infoToolTip_image.css');
 @import url('./components/Popup/infoToolTip/_text/popup__infoToolTip_text.css');
 
-@import url('./components/Footer/footer.css');
+@import url('./components/Footer/Footer.css');
 @import url('./components/Footer/__description/footer__description.css');
 @import url('./components/Footer/__copyright/footer__copyright.css');
 @import url('./components/Footer/__links/footer__links.css');
