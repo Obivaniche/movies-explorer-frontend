@@ -1,4 +1,4 @@
-.Techs__navTab {
+.Techs__NavTab {
     display: flex;
     justify-content: center;
     max-width: 96px;
@@ -9,7 +9,7 @@
     border: none
 }
 
-.Techs__navTab:hover {
+.Techs__NavTab:hover {
     background: #2BE080;
     transition: 0.8s ease;
     border-radius: 10px;

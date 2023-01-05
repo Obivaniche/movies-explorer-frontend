@@ -24,44 +24,44 @@ function Techs () {
                         to={''}
                         titleIcon = {titleIcon.id1} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />
                     <NavIcon
                         to={''}
                         titleIcon = {titleIcon.id2} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />
                     <NavIcon
                         to={''}  
                         titleIcon = {titleIcon.id3} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />
                     <NavIcon 
                         to={''}
                         titleIcon = {titleIcon.id4} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'}
+                        navTabStyle = {'Techs__NavTab'}
 
                     />
                     <NavIcon 
                         to={''} 
                         titleIcon = {titleIcon.id5} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />
                     <NavIcon 
                         to={''} 
                         titleIcon = {titleIcon.id6} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />
                     <NavIcon 
                         to={''} 
                         titleIcon = {titleIcon.id7} 
                         iconStyle = {'Techs__icon'} textStyle = {'Techs__iconText'}
-                        navTabStyle = {'Techs__navTab'} 
+                        navTabStyle = {'Techs__NavTab'} 
                     />      
                 </section>
 
