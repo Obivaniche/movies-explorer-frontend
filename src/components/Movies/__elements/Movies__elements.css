@@ -16,6 +16,7 @@
 @media screen and (max-width: 1159px) {
     .Movies__elements {
         grid-template-columns: repeat(2, 364px);
+        width: 708px;
         /*grid-template-rows: repeat(3, 361px);*/
     }
 }
@@ -25,6 +26,7 @@
         grid-template-columns: repeat(2, 339px);
         column-gap: 30px;
         row-gap: 36px;
+        width: 292px;
     }
 }
 
