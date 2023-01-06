@@ -1,4 +1,7 @@
 .MoviesCard__image {
+    display: block;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
     width: 364px;
     height: 203px;
