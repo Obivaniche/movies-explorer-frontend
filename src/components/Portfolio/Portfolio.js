@@ -7,7 +7,10 @@ function Portfolio () {
     const text = {
         name: 'Владислав',
         profession: 'Фронтенд-разработчик, 31 год',
-        about: `Я живу в прекрасном и пасмурном Санкт-Петербурге, закончил факультет электротехники С-ПбГУАП. Я люблю слушать музыку, и не люблю, когда идет дождь, а ещё увлекаюсь авто и велоспортом. Кодить начал еще в старшей школе, но дальше учебной прогрммы это не заходило. Но после того, как прошёл курс по веб-разработке от Яндекс.Практикум, начал заниматься разработкой в серьез и сделал это своей профессией.`,
+        about: `Я живу в прекрасном и пасмурном Санкт-Петербурге, закончил факультет электротехники С-ПбГУАП. 
+        Я люблю слушать музыку, и не люблю, когда идет дождь, а ещё увлекаюсь авто и велоспортом. 
+        Кодить начал еще в старшей школе, но дальше учебной программы это не заходило. Но после того, как прошёл курс по веб-разработке от Яндекс.Практикум, 
+        начал заниматься разработкой всерьез и сделал это своей профессией.`,
         link1: 'https://www.linkedin.com/in/smirnov-v-v/',
         link2: 'https://github.com/Obivaniche',
         titleItem: 'Портфолио',
@@ -46,7 +49,7 @@ function Portfolio () {
                             </div>
                             <p className="portfolio__title-item">{text.titleItem}</p>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item1}</a>
+                                <a className="portfolio__item-web" href = {text.linkStatic}>{text.item1}</a>
                                 <a
                                     href = {text.linkStatic}
                                     target="_blank" rel="noopener noreferrer"
@@ -56,7 +59,7 @@ function Portfolio () {
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item2}</a>
+                                <a className="portfolio__item-web" href = {text.linkAdaptive}>{text.item2}</a>
                                 <a 
                                     href = {text.linkAdaptive}
                                     target="_blank" rel="noopener noreferrer"
@@ -66,7 +69,7 @@ function Portfolio () {
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web">{text.item3}</a>
+                                <a className="portfolio__item-web" href = {text.linkSinglePageApp}>{text.item3}</a>
                                 <a 
                                     href = {text.linkSinglePageApp}
                                     target="_blank" rel="noopener noreferrer"
