@@ -12,6 +12,7 @@
 @media screen and (max-width:767px) {
     .footer__copyright {
         margin-left: 30px;
+        background-color: #FFFFFF;
     }
 }
 
@@ -19,5 +20,6 @@
     .footer__copyright {
         margin: 18px auto 10px auto;
         color: #A0A0A0;
+        background-color: #FFFFFF;
     }
 }

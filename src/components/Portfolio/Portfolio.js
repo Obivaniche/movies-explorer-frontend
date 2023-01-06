@@ -15,11 +15,11 @@ function Portfolio () {
         link2: 'https://github.com/Obivaniche',
         titleItem: 'Портфолио',
         item1: 'Статичный сайт',
-        linkStatic: 'https://sashaanshukov.github.io/how-to-learn/',
+        linkStatic: 'https://obivaniche.github.io/how-to-learn/',
         item2: 'Адаптивный сайт',
-        linkAdaptive: 'https://sashaanshukov.github.io/russian-travel3/',
+        linkAdaptive: 'https://obivaniche.github.io/russian-travel/',
         item3: 'Одностраничное приложение',
-        linkSinglePageApp: 'https://sashaanshukov.github.io/mesto/'
+        linkSinglePageApp: 'https://obivaniche.github.io/mesto/'
     }
     
     return (
@@ -49,7 +49,9 @@ function Portfolio () {
                             </div>
                             <p className="portfolio__title-item">{text.titleItem}</p>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web" href = {text.linkStatic}>{text.item1}</a>
+                                <a className="portfolio__item-web"
+                                href = {text.linkStatic}
+                                target="_blank" rel="noopener noreferrer">{text.item1}</a>
                                 <a
                                     href = {text.linkStatic}
                                     target="_blank" rel="noopener noreferrer"
@@ -59,7 +61,9 @@ function Portfolio () {
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web" href = {text.linkAdaptive}>{text.item2}</a>
+                                <a className="portfolio__item-web"
+                                href = {text.linkAdaptive}
+                                target="_blank" rel="noopener noreferrer">{text.item2}</a>
                                 <a 
                                     href = {text.linkAdaptive}
                                     target="_blank" rel="noopener noreferrer"
@@ -69,7 +73,9 @@ function Portfolio () {
                                 </a>
                             </div>
                             <div className="portfolio__item">
-                                <a className="portfolio__item-web" href = {text.linkSinglePageApp}>{text.item3}</a>
+                                <a className="portfolio__item-web"
+                                href = {text.linkSinglePageApp}
+                                target="_blank" rel="noopener noreferrer">{text.item3}</a>
                                 <a 
                                     href = {text.linkSinglePageApp}
                                     target="_blank" rel="noopener noreferrer"
