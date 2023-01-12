@@ -1,0 +1,7 @@
+.header__logo {
+    transition: transform .8s ease-in-out;
+}
+
+.header__logo:hover {
+    transform: rotate(360deg);
+}

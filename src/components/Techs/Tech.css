@@ -1,0 +1,13 @@
+.Techs {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F5F5F5;
+}
+
+
+@media screen and (max-width: 321px) {
+    .Techs {
+        background-color: #FFFFFF;
+    }
+}

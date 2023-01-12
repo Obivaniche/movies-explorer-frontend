@@ -1,3 +1,5 @@
-# movies-explorer-frontend
+Ссылка на макет - https://www.figma.com/file/NUQe8rwTh4aMZGqbmmJuZ4/Diploma?node-id=891%3A3857
 
-Ссылка на макет Figma: https://www.figma.com/file/NUQe8rwTh4aMZGqbmmJuZ4/Diploma?node-id=891%3A3857
+Домен Api - https://api.obivaniche-movies.nomoredomains.club
+
+Основной домен - https://obivaniche-movies.nomoredomains.club

@@ -1,0 +1,16 @@
+.Techs__NavTab {
+    display: flex;
+    justify-content: center;
+    max-width: 96px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 0;
+    background-color: #E8E8E8;
+    border: none
+}
+
+.Techs__NavTab:hover {
+    background: #2BE080;
+    transition: 0.8s ease;
+    border-radius: 10px;
+}
