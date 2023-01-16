@@ -3,3 +3,5 @@
 Домен Api - https://api.obivaniche-movies.nomoredomains.club
 
 Основной домен - https://obivaniche-movies.nomoredomains.club
+
+ССылка на пул-реквест - 
